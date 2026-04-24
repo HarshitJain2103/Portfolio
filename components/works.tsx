@@ -31,7 +31,7 @@ const projects = [
     image: "/forensiqEngineImage.jpeg",
     year: "2026",
     description: "24-hour hackathon winner detecting 3 laundering patterns using network analysis and risk scoring.",
-    link: "https://github.com/adithyanotfound/forensiq",
+    link: "https://forensiq-eta.vercel.app",
   },
 ]
 
