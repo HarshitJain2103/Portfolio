@@ -66,7 +66,7 @@ export function EducationSkills() {
           <div className="space-y-2 text-sm">
             <p><span className="text-muted-foreground">Location:</span> {education.location}</p>
             <p><span className="text-muted-foreground">Period:</span> {education.period}</p>
-            <p><span className="font-mono font-semibold">CGPA:</span> {education.cgpa}</p>
+            <p><span className="font-mono font-semibold">CGPA:</span> {education.cgpa} <span className="text-muted-foreground">(till sem 5)</span></p>
           </div>
           {education.image && (
              <div className="mt-auto pt-6 aspect-video overflow-hidden rounded-lg border border-white/10">

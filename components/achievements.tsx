@@ -10,13 +10,18 @@ const achievements = [
   },
   {
     label: "Problems Solved",
-    value: "800+",
+    value: "900+",
     subtitle: "DSA Mastery",
   },
   {
     label: "CodeChef Rating",
     value: "1547",
     subtitle: "Competitive Programming",
+  },
+  {
+    label: "Codeforces Rating",
+    value: "1284",
+    subtitle: "Pupil",
   },
   {
     label: "Hackathon Wins",
