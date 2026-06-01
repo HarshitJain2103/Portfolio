@@ -6,21 +6,21 @@ const achievements = [
   {
     label: "LeetCode Rating",
     value: "1789",
-    subtitle: "1700+ Contest Rating",
+    subtitle: "365-Day Batch,
   },
   {
     label: "Problems Solved",
-    value: "900+",
+    value: "1000+",
     subtitle: "DSA Mastery",
   },
   {
     label: "CodeChef Rating",
-    value: "1547",
+    value: "1569",
     subtitle: "Competitive Programming",
   },
   {
     label: "Codeforces Rating",
-    value: "1284",
+    value: "1313",
     subtitle: "Pupil",
   },
   {
