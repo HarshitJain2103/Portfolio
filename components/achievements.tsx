@@ -6,7 +6,7 @@ const achievements = [
   {
     label: "LeetCode Rating",
     value: "1789",
-    subtitle: "365-Day Batch,
+    subtitle: "365-Day Batch",
   },
   {
     label: "Problems Solved",
