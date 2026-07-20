@@ -7,6 +7,7 @@ const achievements = [
     label: "LeetCode Rating",
     value: "1900",
     subtitle: "Knight @ LeetCode",
+    link: "https://leetcode.com/u/_harshit_jain/",
   },
   {
     label: "Problems Solved",
@@ -17,11 +18,13 @@ const achievements = [
     label: "CodeChef Rating",
     value: "1569",
     subtitle: "2*",
+    link: "https://www.codechef.com/users/myster_hj",
   },
   {
     label: "Codeforces Rating",
     value: "1313",
     subtitle: "Pupil",
+    link: "https://codeforces.com/profile/_harshit_jain",
   },
   {
     label: "Hackathon Wins",
@@ -57,6 +60,7 @@ const awards = [
     description: "4th place among 80 teams in a phone-first AI build.",
     year: "2026",
     award: "₹10,000",
+    image: "/IQOO_Image.jpeg",
   },
 ]
 
@@ -78,13 +82,16 @@ export function Achievements() {
       {/* DSA & Competition Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-32">
         {achievements.map((achievement, index) => (
-          <motion.div
+          <motion.a
             key={achievement.label}
+            href={achievement.link}
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: index * 0.1 }}
-            className="border border-white/10 p-6 rounded-lg backdrop-blur-sm hover:border-white/30 transition-colors duration-300"
+            className="block border border-white/10 p-6 rounded-lg backdrop-blur-sm hover:border-white/30 transition-colors duration-300"
           >
             <p className="font-mono text-[10px] tracking-widest text-muted-foreground mb-2 uppercase">
               {achievement.label}
@@ -93,7 +100,7 @@ export function Achievements() {
               {achievement.value}
             </h3>
             <p className="text-xs text-muted-foreground">{achievement.subtitle}</p>
-          </motion.div>
+          </motion.a>
         ))}
       </div>
 
