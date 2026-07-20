@@ -3,18 +3,20 @@
 import { motion } from "framer-motion"
 
 const skills = {
-  "Languages": ["JavaScript", "TypeScript", "Python", "Java", "C", "C++", "HTML", "CSS", "SQL"],
-  "Frontend": ["React", "Next.js", "React Native", "shadcn/ui", "Tailwind CSS", "D3.js"],
-  "Backend": ["Node.js", "Express.js", "FastAPI", "REST APIs", "WebSockets"],
-  "Cloud & DevOps": ["AWS", "Docker", "Kubernetes", "GitHub Actions", "Nginx", "CI/CD"],
-  "Databases": ["PostgreSQL", "MongoDB", "MySQL", "Prisma", "Mongoose"],
-  "Specializations": ["DSA", "OOP", "Generative AI", "Prompt Engineering", "Agile Scrum"],
+  "Languages": ["Python", "JavaScript", "TypeScript", "Java", "C++", "SQL"],
+  "Frontend": ["HTML", "CSS", "React.js", "Next.js"],
+  "Backend": ["Node.js", "Express.js", "RESTful APIs"],
+  "Databases": ["MongoDB", "PostgreSQL"],
+  "Cloud & DevOps": ["AWS", "Docker", "Kubernetes", "CI/CD"],
+  "Core Fundamentals": ["DSA", "OOP", "Operating Systems"],
+  "Tools": ["Git", "GitHub"],
+  "Professional Skills": ["Agile Scrum", "Remote Collaboration", "Problem Solving"],
 }
 
 const education = {
   school: "Guru Gobind Singh Indraprastha University",
   degree: "Bachelor of Technology in Computer Science",
-  cgpa: "8.93",
+  cgpa: "9.03",
   period: "Aug 2023 – Aug 2027",
   location: "New Delhi, India",
   image: "/cgpaSS.jpeg",
@@ -31,8 +33,8 @@ const internship = {
   title: "Cloud & DevOps Intern",
   company: "CodeSquadz",
   location: "Noida, UP, India",
-  period: "Jun 2025 – Jul 2025",
-  description: "Completed 2-month on-site internship working with AWS (EC2, S3, Lambda, DynamoDB, RDS, VPC, IAM) and Docker. Built CI/CD pipelines reducing deployment steps by ~40%.",
+  period: "Jun 2025 – Jul 2025", 
+  description: "Completed a 1-month on-site Cloud & DevOps internship program working with AWS and Docker, building CI/CD pipelines and deployment workflows that reduced deployment steps.",
   image: "/codesquadzCert.jpeg",
 }
 
@@ -66,7 +68,7 @@ export function EducationSkills() {
           <div className="space-y-2 text-sm">
             <p><span className="text-muted-foreground">Location:</span> {education.location}</p>
             <p><span className="text-muted-foreground">Period:</span> {education.period}</p>
-            <p><span className="font-mono font-semibold">CGPA:</span> {education.cgpa} <span className="text-muted-foreground">(till sem 5)</span></p>
+            <p><span className="font-mono font-semibold">CGPA:</span> {education.cgpa} <span className="text-muted-foreground">(updated after sem 6)</span></p>
           </div>
           {education.image && (
              <div className="mt-auto pt-6 aspect-video overflow-hidden rounded-lg border border-white/10">

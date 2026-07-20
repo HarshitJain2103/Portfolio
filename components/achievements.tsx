@@ -5,18 +5,18 @@ import { motion } from "framer-motion"
 const achievements = [
   {
     label: "LeetCode Rating",
-    value: "1789",
-    subtitle: "365-Day Batch",
+    value: "1900",
+    subtitle: "Knight @ LeetCode",
   },
   {
     label: "Problems Solved",
-    value: "1000+",
-    subtitle: "DSA Mastery",
+    value: "1200+",
+    subtitle: "DSA Questions",
   },
   {
     label: "CodeChef Rating",
     value: "1569",
-    subtitle: "Competitive Programming",
+    subtitle: "2*",
   },
   {
     label: "Codeforces Rating",
@@ -25,7 +25,7 @@ const achievements = [
   },
   {
     label: "Hackathon Wins",
-    value: "4×",
+    value: "5×",
     subtitle: "Including 2× First Place",
   },
 ]
@@ -53,10 +53,10 @@ const awards = [
     image: "/RiftImage.jpeg",
   },
   {
-    title: "Sprint4Good AI Hackathon Finalist",
-    description: "Top 6 finalist among nationwide teams at IIT Delhi.",
+    title: "iQOO Monster Inside 8-Hour AI Hackathon",
+    description: "4th place among 80 teams in a phone-first AI build.",
     year: "2026",
-    award: "Selected",
+    award: "₹10,000",
   },
 ]
 
