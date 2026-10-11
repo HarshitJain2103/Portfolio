@@ -48,7 +48,7 @@ function TypewriterText() {
   const lines = currentText.split("\n")
 
   return (
-    <h2 className="font-sans text-4xl md:text-6xl lg:text-7xl font-light tracking-tight text-balance min-h-[80px] md:min-h-[144px]">
+    <h2 className="font-sans text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-light tracking-tight text-balance min-h-[64px] sm:min-h-[80px] md:min-h-[144px]">
       {lines[0]}
       {lines.length > 1 && (
         <>
@@ -83,15 +83,18 @@ export function Hero() {
       </div>
 
       {/* Typography Overlay */}
-      <motion.div style={{ opacity, scale }} className="relative z-10 h-full flex flex-col justify-between p-8 md:p-12 md:px-12 md:py-20">
+      <motion.div
+        style={{ opacity, scale }}
+        className="relative z-10 h-full flex flex-col justify-between p-6 pt-24 pb-20 sm:p-8 sm:pt-28 md:p-12 md:py-20"
+      >
         {/* Top Left */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
-          <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-2">01 — SOFTWARE ENGINEER</p>
-          <h2 className="font-sans text-4xl md:text-6xl lg:text-7xl font-light tracking-tight text-balance">
+          <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-2">SOFTWARE ENGINEER</p>
+          <h2 className="font-sans text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-balance">
             HARSHIT
             <br />
             <span className="italic">JAIN</span>
@@ -103,12 +106,12 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center gap-4"
+          className="absolute top-[48%] sm:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center gap-3 sm:gap-4"
         >
           <motion.img
             src="/ProfileHarshitJain.jpeg"
             alt="Profile"
-            className="w-64 md:w-80 aspect-video rounded-xl border border-white/10 object-cover object-top shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
+            className="w-48 sm:w-64 md:w-80 aspect-video rounded-xl border border-white/10 object-cover object-top shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -120,7 +123,7 @@ export function Hero() {
             data-cursor-hover
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="relative px-8 py-4 border border-white/20 rounded-full font-mono text-sm tracking-widest uppercase bg-transparent backdrop-blur-sm hover:bg-white hover:text-black transition-colors duration-500"
+            className="relative px-6 py-3 sm:px-8 sm:py-4 border border-white/20 rounded-full font-mono text-xs sm:text-sm tracking-widest uppercase bg-transparent backdrop-blur-sm hover:bg-white hover:text-black transition-colors duration-500"
           >
             View Resume
             <span className="absolute -top-1 -right-1 w-2 h-2 bg-[#2563eb] rounded-full animate-pulse" />
@@ -134,7 +137,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="self-end text-right"
         >
-          <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-2">02 — FOCUS</p>
+          <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-2">CORE FOCUS</p>
           <TypewriterText />
         </motion.div>
       </motion.div>

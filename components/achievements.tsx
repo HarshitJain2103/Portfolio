@@ -1,23 +1,24 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { Trophy, Award, Flame, Target } from "lucide-react"
 
 const achievements = [
   {
     label: "LeetCode Rating",
-    value: "1900",
-    subtitle: "Knight @ LeetCode",
+    value: "1918",
+    subtitle: "Knight (Top ~3%)",
     link: "https://leetcode.com/u/_harshit_jain/",
   },
   {
     label: "Problems Solved",
     value: "1200+",
-    subtitle: "DSA Questions",
+    subtitle: "LeetCode • CF • CC",
   },
   {
     label: "CodeChef Rating",
     value: "1569",
-    subtitle: "2*",
+    subtitle: "2★ Rating",
     link: "https://www.codechef.com/users/myster_hj",
   },
   {
@@ -27,9 +28,36 @@ const achievements = [
     link: "https://codeforces.com/profile/_harshit_jain",
   },
   {
-    label: "Hackathon Wins",
+    label: "Hackathons",
     value: "5×",
-    subtitle: "Including 2× First Place",
+    subtitle: "Winner & Finalist",
+  },
+]
+
+const contestHighlights = [
+  {
+    title: "LeetCode Biweekly Contest 186",
+    metric: "Global Rank 379 / 39k",
+    context: "Achieved top 1% global contest finish among 39,000+ participants.",
+    icon: Trophy,
+  },
+  {
+    title: "CodeChef Starters 221",
+    metric: "Global Rank 627",
+    context: "Ranked 627 globally in competitive programming starters round.",
+    icon: Target,
+  },
+  {
+    title: "LeetCode Daily Consistency",
+    metric: "500-Day Badge",
+    context: "Earned prestigious 500-day continuous problem-solving milestone.",
+    icon: Flame,
+  },
+  {
+    title: "AlgoUniversity Selection",
+    metric: "Shortlisted",
+    context: "Selected for interview rounds among 20,000+ nationwide applicants.",
+    icon: Award,
   },
 ]
 
@@ -43,7 +71,7 @@ const awards = [
   },
   {
     title: "HACKDATA '26 Runner-Up",
-    description: "24-hour hackathon organized by Shiv Nagar University. Second position.",
+    description: "24-hour hackathon organized by Shiv Nadar University. Second position.",
     year: "2026",
     award: "₹60,000",
     image: "/HackdataImage.jpeg",
@@ -66,45 +94,87 @@ const awards = [
 
 export function Achievements() {
   return (
-    <section id="achievements" className="relative py-32 px-8 md:px-12 md:py-24 bg-[#0a0a0a]">
+    <section id="achievements" className="relative pt-10 pb-8 px-4 sm:px-6 md:px-12 md:pt-12 md:pb-8 bg-[#0a0a0a]">
       {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="mb-24"
+        className="mb-10 sm:mb-12 md:mb-14"
       >
-        <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-4">05 — ACHIEVEMENTS</p>
-        <h2 className="font-sans text-3xl md:text-5xl font-light italic">Recognition & Stats</h2>
+        <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-4">4 — ACHIEVEMENTS</p>
+        <h2 className="font-sans text-3xl md:text-5xl font-light italic">Recognition & Metrics</h2>
       </motion.div>
 
-      {/* DSA & Competition Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-32">
+      {/* DSA & Platform Ratings */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6 mb-12 sm:mb-16">
         {achievements.map((achievement, index) => (
           <motion.a
             key={achievement.label}
             href={achievement.link}
-            target="_blank"
-            rel="noopener noreferrer"
+            target={achievement.link ? "_blank" : undefined}
+            rel={achievement.link ? "noopener noreferrer" : undefined}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: index * 0.1 }}
-            className="block border border-white/10 p-6 rounded-lg backdrop-blur-sm hover:border-white/30 transition-colors duration-300"
+            transition={{ duration: 0.8, delay: index * 0.08 }}
+            className={`block border border-white/10 p-4 sm:p-5 md:p-6 rounded-lg backdrop-blur-sm transition-all duration-300 ${
+              achievement.link
+                ? "hover:border-white/30 hover:bg-white/[0.02] cursor-pointer"
+                : "hover:border-white/20"
+            }`}
           >
-            <p className="font-mono text-[10px] tracking-widest text-muted-foreground mb-2 uppercase">
+            <p className="font-mono text-[9px] sm:text-[10px] tracking-widest text-muted-foreground mb-1.5 sm:mb-2 uppercase truncate">
               {achievement.label}
             </p>
-            <h3 className="font-sans text-3xl md:text-4xl font-light mb-1 text-white">
+            <h3 className="font-sans text-2xl sm:text-3xl md:text-4xl font-light mb-1 text-white">
               {achievement.value}
             </h3>
-            <p className="text-xs text-muted-foreground">{achievement.subtitle}</p>
+            <p className="text-[11px] sm:text-xs text-muted-foreground truncate">{achievement.subtitle}</p>
           </motion.a>
         ))}
       </div>
 
-      {/* Awards & Recognitions */}
+      {/* Contest & Global Ranking Highlights */}
+      <div className="mb-16 md:mb-20">
+        <motion.h3
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="font-sans text-xl md:text-2xl font-light mb-8 italic text-white/90"
+        >
+          Competitive Programming Highlights
+        </motion.h3>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          {contestHighlights.map((item, index) => {
+            const IconComponent = item.icon
+            return (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="border border-white/10 rounded-lg p-5 bg-white/[0.015] hover:border-white/25 transition-all duration-300"
+              >
+                <div className="flex items-center justify-between mb-3">
+                  <IconComponent className="w-4 h-4 text-accent" />
+                  <span className="font-mono text-[11px] font-semibold text-white px-2 py-0.5 rounded border border-white/15 bg-white/5">
+                    {item.metric}
+                  </span>
+                </div>
+                <h4 className="font-sans text-base font-light text-white mb-1.5">{item.title}</h4>
+                <p className="text-xs text-muted-foreground leading-relaxed">{item.context}</p>
+              </motion.div>
+            )
+          })}
+        </div>
+      </div>
+
+      {/* Awards & Hackathon Victories */}
       <div>
         <motion.h3
           initial={{ opacity: 0, y: 20 }}
@@ -126,17 +196,22 @@ export function Achievements() {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="border-t border-white/10 py-6 group hover:border-white/20 transition-colors duration-300"
             >
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-6">
                 <div className="flex-1">
-                  <h4 className="font-sans text-xl md:text-2xl font-light mb-2 group-hover:text-white/70 transition-colors duration-300">
-                    {award.title}
-                  </h4>
-                  <p className="text-sm text-muted-foreground mb-2">{award.description}</p>
+                  <div className="flex items-center justify-between sm:justify-start gap-2 mb-2">
+                    <h4 className="font-sans text-lg sm:text-xl md:text-2xl font-light group-hover:text-white/70 transition-colors duration-300">
+                      {award.title}
+                    </h4>
+                    <span className="sm:hidden font-mono text-xs font-semibold text-white px-2.5 py-0.5 border border-white/20 rounded-full bg-white/5 shrink-0">
+                      {award.award}
+                    </span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-muted-foreground mb-2">{award.description}</p>
                   <p className="text-xs font-mono tracking-widest text-muted-foreground">{award.year}</p>
                 </div>
 
                 {award.image && (
-                  <div className="w-full md:w-48 aspect-video rounded-lg overflow-hidden border border-white/10 shrink-0">
+                  <div className="w-full sm:w-40 md:w-48 aspect-video rounded-lg overflow-hidden border border-white/10 shrink-0">
                     <img 
                       src={award.image} 
                       alt={award.title} 
@@ -145,7 +220,7 @@ export function Achievements() {
                   </div>
                 )}
 
-                <div className="flex flex-col items-start md:items-end gap-2 shrink-0">
+                <div className="hidden sm:flex flex-col items-end gap-2 shrink-0">
                   <span className="font-mono text-sm font-semibold text-white px-3 py-1 border border-white/20 rounded-full bg-white/5">
                     {award.award}
                   </span>
@@ -157,7 +232,7 @@ export function Achievements() {
       </div>
 
       {/* Bottom Border */}
-      <div className="border-t border-white/10 mt-16" />
+      <div className="border-t border-white/10 mt-8" />
     </section>
   )
 }

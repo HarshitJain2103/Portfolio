@@ -44,17 +44,20 @@ export function Footer() {
         />
 
         {/* Content */}
-        <div className="relative py-16 md:py-24 px-8 md:px-12 border-t border-white/10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <motion.h2
-              className="font-sans text-4xl md:text-6xl lg:text-8xl font-light tracking-tight text-center md:text-left"
-              animate={{
-                color: isHovered ? "#050505" : "#fafafa",
-              }}
-              transition={{ duration: 0.3 }}
-            >
-              Let's <span className="italic">Build</span>
-            </motion.h2>
+        <div className="relative py-12 sm:py-16 md:py-24 px-4 sm:px-8 md:px-12 border-t border-white/10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
+            <div className="text-center md:text-left">
+              <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-2">6 — CONTACT</p>
+              <motion.h2
+                className="font-sans text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight text-center md:text-left"
+                animate={{
+                  color: isHovered ? "#050505" : "#fafafa",
+                }}
+                transition={{ duration: 0.3 }}
+              >
+                Let's <span className="italic">Build</span>
+              </motion.h2>
+            </div>
 
             <motion.div
               animate={{
@@ -63,15 +66,15 @@ export function Footer() {
               }}
               transition={{ duration: 0.3 }}
             >
-              <ArrowUpRight className="w-12 h-12 md:w-16 md:h-16" />
+              <ArrowUpRight className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16" />
             </motion.div>
           </div>
         </div>
       </motion.a>
 
       {/* Footer Info */}
-      <div className="px-8 md:px-12 py-8 border-t border-white/10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="px-4 sm:px-8 md:px-12 py-8 border-t border-white/10">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 text-center md:text-left">
           {/* Local Time */}
           <div className="font-mono text-xs tracking-widest text-muted-foreground">
             <span className="mr-2">LOCAL TIME</span>
@@ -79,7 +82,7 @@ export function Footer() {
           </div>
 
           {/* Links */}
-          <div className="flex gap-8">
+          <div className="flex flex-wrap justify-center md:justify-start gap-4 sm:gap-6 md:gap-8">
             {[
               { name: "LinkedIn", url: "https://www.linkedin.com/in/harshit-jain-9a6803316/" },
               { name: "GitHub", url: "https://github.com/HarshitJain2103" },

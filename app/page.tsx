@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
+import { Experience } from "@/components/experience"
 import { Works } from "@/components/works"
 import { Achievements } from "@/components/achievements"
 import { EducationSkills } from "@/components/education-skills"
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <SectionBlend />
         <About />
+        <Experience />
         <Works />
         <Achievements />
         <EducationSkills />

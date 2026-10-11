@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 
 const navLinks = [
   { label: "Expertise", href: "#about" },
+  { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#works" },
   { label: "Achievements", href: "#achievements" },
   { label: "Education", href: "#education" },
@@ -41,7 +42,7 @@ export function Navbar() {
           isScrolled ? "bg-background/80 backdrop-blur-md border-b border-border" : ""
         }`}
       >
-        <nav className="flex items-center justify-between px-6 py-4 my-0 md:px-12 md:py-5">
+        <nav className="flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 py-4 md:py-5">
           {/* Logo */}
           <a
             href="#"
@@ -56,14 +57,14 @@ export function Navbar() {
           </a>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center gap-8">
+          <ul className="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8">
             {navLinks.map((link, index) => (
               <li key={link.label}>
                 <button
                   onClick={() => scrollToSection(link.href)}
-                  className="group relative font-mono text-xs tracking-wider text-muted-foreground hover:text-foreground transition-colors duration-300"
+                  className="group relative font-mono text-[11px] lg:text-xs tracking-wider text-muted-foreground hover:text-foreground transition-colors duration-300"
                 >
-                  <span className="text-accent mr-1">0{index + 1}</span>
+                  <span className="text-accent mr-1">{index + 1}</span>
                   {link.label.toUpperCase()}
                   <span className="absolute -bottom-1 left-0 w-0 h-px bg-foreground group-hover:w-full transition-all duration-300" />
                 </button>
@@ -72,7 +73,7 @@ export function Navbar() {
           </ul>
 
           {/* Status Indicator */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden xl:flex items-center gap-3">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
@@ -123,7 +124,7 @@ export function Navbar() {
                   onClick={() => scrollToSection(link.href)}
                   className="group text-4xl font-sans tracking-tight text-foreground"
                 >
-                  <span className="text-accent font-mono text-sm mr-2">0{index + 1}</span>
+                  <span className="text-accent font-mono text-sm mr-2">{index + 1}</span>
                   {link.label}
                 </motion.button>
               ))}
